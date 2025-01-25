@@ -61,9 +61,14 @@ export default class XpReward extends Base {
      * @returns {void}
      */
     async runInteraction(annotation) {
+        let self = this;
         await this.player.pause();
         this.renderContainer(annotation);
-        let content = await this.render(annotation);
+        // We don't need to run the render method every time the content is applied. We can cache the content.
+        if (!self.cache[annotation.id] || self.isEditMode()) {
+            self.cache[annotation.id] = await this.render(annotation);
+        }
+        let content = self.cache[annotation.id];
         let $message = $(`#message[data-id='${annotation.id}']`);
         $message.html('<div class="modal-body d-flex align-items-center justify-content-center">' + content + '</div>');
         this.postContentRender(annotation);
