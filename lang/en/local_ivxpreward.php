@@ -29,5 +29,6 @@ $string['claimedxp'] = '{$a} points claimed!';
 $string['claimxp'] = 'Claim {$a} points!';
 $string['pluginname'] = 'XP reward';
 $string['privacy:metadata'] = 'The XP reward plugin doesn\'t store any personal data.';
+$string['tutorialurl'] = 'https://www.youtube.com/watch?v=sRT_Jv2Tnew';
 $string['xprewardcontent'] = 'XP reward';
 $string['xprewarddescription'] = 'Reward viewers with experience points.';
