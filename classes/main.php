@@ -58,7 +58,7 @@ class main extends \ivplugin_richtext\main {
         return '<div id="xpreward" class="text-center shadow bg-white rounded mx-auto overflow-hidden position-absolute
          d-flex flex-column justify-content-between" style="width: min-content;max-height:200px; height: 90%; max-width: 300px;">
          <img src="' . $icon . '" alt="star" class="p-2" style="max-height: calc(100% - 35px);margin: auto;">
-          <button id="claimxp" class="btn text-nowrap btn-primary btn-block rounded-0" style="height: 35px;">'
+          <button id="claimxp" class="btn text-nowrap btn-primary iv-btn-block iv-rounded-0" style="height: 35px;">'
             . get_string('claimxp', 'local_ivxpreward', $star) . '</button></div>';
     }
 }
