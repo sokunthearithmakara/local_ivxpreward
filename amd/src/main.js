@@ -52,6 +52,7 @@ export default class XpReward extends Base {
                 $(this).find('button').prop('disabled', true);
                 $(this).find('button').text(M.util.get_string('claimedxp', 'local_ivxpreward', annotation.xp));
                 self.toggleCompletion(annotation.id, 'mark-done', 'automatic');
+                window.fireConfetti();
             });
     }
 
