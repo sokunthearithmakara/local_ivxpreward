@@ -23,6 +23,7 @@
 
 import $ from 'jquery';
 import Base from 'mod_interactivevideo/type/base';
+import {get_string as getString} from 'core/str';
 
 export default class XpReward extends Base {
     /**
@@ -44,13 +45,13 @@ export default class XpReward extends Base {
         }, 1000);
     }
 
-    postContentRender(annotation) {
+   postContentRender(annotation) {
         let self = this;
         $(document).off('click', `#message[data-id='${annotation.id}'] #xpreward`)
-            .on('click', `#message[data-id='${annotation.id}'] #xpreward`, function(e) {
+            .on('click', `#message[data-id='${annotation.id}'] #xpreward`, async function(e) {
                 e.preventDefault();
                 $(this).find('button').prop('disabled', true);
-                $(this).find('button').text(M.util.get_string('claimedxp', 'local_ivxpreward', annotation.xp));
+                $(this).find('button').text(await getString('claimedxp', 'local_ivxpreward', annotation.xp));
                 self.toggleCompletion(annotation.id, 'mark-done', 'automatic');
                 window.fireConfetti();
             });
