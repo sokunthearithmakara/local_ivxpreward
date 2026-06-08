@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * English language pack for XP Reward
+ * Khmer language pack for XP Reward
  *
  * @package    local_ivxpreward
  * @category   string
@@ -25,9 +25,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['claimedxp'] = 'បានរក្សាទុក {$a} ពិន្ទុ!';
-$string['claimxp'] = 'យក {$a} ពិន្ទុ!';
+$string['claimedxp'] = 'ទទួលបាន {$a} ពិន្ទុរួចហើយ!';
+$string['claimxp'] = 'ទទួលយក {$a} ពិន្ទុ!';
 $string['pluginname'] = 'រង្វាន់ XP';
-$string['privacy:metadata'] = 'XP Reward មិនផ្ទុកទិន្នន័យបុគ្គលទេ';
+$string['privacy:metadata'] = 'កម្មវិធីជំនួយរង្វាន់ XP មិនរក្សាទុកទិន្នន័យផ្ទាល់ខ្លួនណាមួយឡើយ។';
+$string['tutorialurl'] = 'https://www.youtube.com/watch?v=sRT_Jv2Tnew';
 $string['xprewardcontent'] = 'រង្វាន់ XP';
-$string['xprewarddescription'] = 'ផ្តល់រង្វាន់ដល់សិស្សដែលបានមើលវីដេអូដល់ខណៈណាមួយ';
+$string['xprewarddescription'] = 'ផ្តល់រង្វាន់ដល់សិស្សដែលបានមើលវីដេអូដល់ខណៈណាមួយ។';
