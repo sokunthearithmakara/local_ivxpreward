@@ -45,6 +45,23 @@ class form extends \mod_interactivevideo\form\base_form {
     }
 
     /**
+     * Force xpreward to never appear on the annotation nav or chapter panel.
+     *
+     * The advanced section is not rendered in this content type's form, so the
+     * visibility flags are overridden here rather than relying on form defaults.
+     *
+     * @param \stdClass $data
+     * @return string
+     */
+    public function process_advanced_settings($data) {
+        $advanced = parent::process_advanced_settings($data);
+        $decoded = json_decode($advanced);
+        $decoded->visiblebeforecompleted = 0;
+        $decoded->visibleaftercompleted = 0;
+        return json_encode($decoded);
+    }
+
+    /**
      * Form definition
      *
      * @return void
